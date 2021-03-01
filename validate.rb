@@ -10,6 +10,8 @@ CC_INPUT_ERROR_MESSAGE = 'Your cc input has an error'
 def validate(ccn)
   validate_input(ccn)
   ccn = normalise(ccn) if ccn.match?("[0-9]{4}[\-:\s][0-9]{4}[\-:\s][0-9]{4}[\-:\s][0-9]{4}")
+  # raise error (the wrong format of the input) here. You shouldn't get_check_sum for 1234 1234 1234 123.
+  # Maybe we can use '[\-:\s]?' ? 
   check_digit = get_check_sum(ccn)
   (check_digit % TEN).zero?
 rescue ArgumentError
@@ -35,6 +37,7 @@ end
 
 def normalise(ccn)
   ccn.gsub(/[\- \s]/, '-' => '', ' ' => '')
+  # Can you use ccn.gsub(/[\- \s]/, '')?
 end
 
 p '------------success cases-----------------'
