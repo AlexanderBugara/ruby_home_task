@@ -3,6 +3,8 @@ GEM
   specs:
     ast (2.4.2)
     benchmark (0.1.1)
+    fileutils (1.5.0)
+    logger (1.4.3)
     parallel (1.20.1)
     parser (3.0.0.0)
       ast (~> 2.4.1)
@@ -21,6 +23,8 @@ GEM
     rubocop-ast (1.4.1)
       parser (>= 2.7.1.5)
     ruby-progressbar (1.11.0)
+    tmpdir (0.1.1)
+      fileutils
     unicode-display_width (2.0.0)
 
 PLATFORMS
@@ -28,7 +32,9 @@ PLATFORMS
 
 DEPENDENCIES
   benchmark (~> 0.1.1)
+  logger
   rubocop (~> 1.10.0)
+  tmpdir
 
 BUNDLED WITH
    2.1.4
