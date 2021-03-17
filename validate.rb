@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require './lib/UserWrapper'
-require './lib/User'
-require './lib/Card'
+require './lib/user_wrapper'
+require './lib/user'
+require './lib/card'
 
 p '------------success cases-----------------'
 
